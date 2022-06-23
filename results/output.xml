@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.2 on darwin)" generated="20220623 14:37:55.367" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.2 on darwin)" generated="20220623 15:43:16.556" rpa="false" schemaversion="3">
 <suite id="s1" name="Credentialmodallaunch" source="/Users/navyaannajames/PycharmProjects/Portal/portal-rf-automation/testcases/credentialmodallaunch.robot">
 <test id="s1-t1" name="LauchCredentialModal" line="10">
 <kw name="Start Browser" library="credentialmodallaunch_keywords" type="SETUP">
@@ -7,86 +7,86 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220623 14:37:55.561" level="INFO">Opening browser 'chrome' to base url 'https://portal.staging.gb.bink.com/asset-comparator'.</msg>
-<status status="PASS" starttime="20220623 14:37:55.561" endtime="20220623 14:38:01.995"/>
+<msg timestamp="20220623 15:43:16.755" level="INFO">Opening browser 'chrome' to base url 'https://portal.staging.gb.bink.com/asset-comparator'.</msg>
+<status status="PASS" starttime="20220623 15:43:16.755" endtime="20220623 15:43:23.483"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220623 14:38:01.999" endtime="20220623 14:38:02.145"/>
+<status status="PASS" starttime="20220623 15:43:23.484" endtime="20220623 15:43:23.627"/>
 </kw>
-<status status="PASS" starttime="20220623 14:37:55.561" endtime="20220623 14:38:02.146"/>
+<status status="PASS" starttime="20220623 15:43:16.755" endtime="20220623 15:43:23.627"/>
 </kw>
 <kw name="Validation Title" library="credentialmodallaunch_keywords">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Bink Portal</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220623 14:38:02.161" level="INFO">Page title is 'Bink Portal'.</msg>
-<status status="PASS" starttime="20220623 14:38:02.153" endtime="20220623 14:38:02.161"/>
+<msg timestamp="20220623 15:43:23.632" level="INFO">Page title is 'Bink Portal'.</msg>
+<status status="PASS" starttime="20220623 15:43:23.628" endtime="20220623 15:43:23.632"/>
 </kw>
-<status status="PASS" starttime="20220623 14:38:02.153" endtime="20220623 14:38:02.161"/>
+<status status="PASS" starttime="20220623 15:43:23.628" endtime="20220623 15:43:23.632"/>
 </kw>
 <kw name="Login Credentials" library="credentialmodallaunch_keywords">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txt_loginEmail}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220623 14:38:02.162" level="INFO">Typing text 'testbink123+pl7@gmail.com' into text field 'xpath://input[@id='bink-form-field-credentials-email']'.</msg>
-<status status="PASS" starttime="20220623 14:38:02.161" endtime="20220623 14:38:02.484"/>
+<msg timestamp="20220623 15:43:23.633" level="INFO">Typing text 'testbink123+pl7@gmail.com' into text field 'xpath://input[@id='bink-form-field-credentials-email']'.</msg>
+<status status="PASS" starttime="20220623 15:43:23.633" endtime="20220623 15:43:23.824"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>${txt_loginpassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220623 14:38:02.484" level="INFO">Typing password into text field 'xpath://input[@id='bink-form-field-credentials-password']'.</msg>
-<msg timestamp="20220623 14:38:02.507" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220623 14:38:02.588" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220623 14:38:02.484" endtime="20220623 14:38:02.588"/>
+<msg timestamp="20220623 15:43:23.824" level="INFO">Typing password into text field 'xpath://input[@id='bink-form-field-credentials-password']'.</msg>
+<msg timestamp="20220623 15:43:23.841" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220623 15:43:23.874" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220623 15:43:23.824" endtime="20220623 15:43:23.874"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btn_credential}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220623 14:38:02.589" level="INFO">Clicking element '//div[normalize-space()='Verify Credentials']'.</msg>
-<status status="PASS" starttime="20220623 14:38:02.588" endtime="20220623 14:38:02.663"/>
+<msg timestamp="20220623 15:43:23.874" level="INFO">Clicking element '//div[normalize-space()='Verify Credentials']'.</msg>
+<status status="PASS" starttime="20220623 15:43:23.874" endtime="20220623 15:43:23.915"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220623 14:38:07.667" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220623 14:38:02.664" endtime="20220623 14:38:07.668"/>
+<msg timestamp="20220623 15:43:28.930" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220623 15:43:23.915" endtime="20220623 15:43:28.932"/>
 </kw>
-<status status="PASS" starttime="20220623 14:38:02.161" endtime="20220623 14:38:07.668"/>
+<status status="PASS" starttime="20220623 15:43:23.633" endtime="20220623 15:43:28.933"/>
 </kw>
 <kw name="Close Credential Modal" library="credentialmodallaunch_keywords">
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220623 14:38:09.670" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220623 14:38:07.669" endtime="20220623 14:38:09.671"/>
+<msg timestamp="20220623 15:43:30.938" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220623 15:43:28.934" endtime="20220623 15:43:30.938"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${click_close}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220623 14:38:09.672" level="INFO">Clicking element 'xpath://button[@aria-label='Close']//*[name()='svg']//*[name()='path' and contains(@fill-rule,'evenodd')]'.</msg>
-<status status="PASS" starttime="20220623 14:38:09.671" endtime="20220623 14:38:09.739"/>
+<msg timestamp="20220623 15:43:30.940" level="INFO">Clicking element 'xpath://button[@aria-label='Close']//*[name()='svg']//*[name()='path' and contains(@fill-rule,'evenodd')]'.</msg>
+<status status="PASS" starttime="20220623 15:43:30.938" endtime="20220623 15:43:31.015"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220623 14:38:11.739" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220623 14:38:09.739" endtime="20220623 14:38:11.739"/>
+<msg timestamp="20220623 15:43:33.017" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220623 15:43:31.015" endtime="20220623 15:43:33.018"/>
 </kw>
-<status status="PASS" starttime="20220623 14:38:07.669" endtime="20220623 14:38:11.740"/>
+<status status="PASS" starttime="20220623 15:43:28.933" endtime="20220623 15:43:33.018"/>
 </kw>
 <kw name="Kill Browser" library="credentialmodallaunch_keywords" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220623 14:38:11.740" endtime="20220623 14:38:11.834"/>
+<status status="PASS" starttime="20220623 15:43:33.021" endtime="20220623 15:43:33.377"/>
 </kw>
-<status status="PASS" starttime="20220623 14:38:11.740" endtime="20220623 14:38:11.835"/>
+<status status="PASS" starttime="20220623 15:43:33.018" endtime="20220623 15:43:33.378"/>
 </kw>
-<status status="PASS" starttime="20220623 14:37:55.560" endtime="20220623 14:38:11.835"/>
+<status status="PASS" starttime="20220623 15:43:16.754" endtime="20220623 15:43:33.378"/>
 </test>
-<status status="PASS" starttime="20220623 14:37:55.368" endtime="20220623 14:38:11.835"/>
+<status status="PASS" starttime="20220623 15:43:16.560" endtime="20220623 15:43:33.378"/>
 </suite>
 <statistics>
 <total>
