@@ -27,4 +27,3 @@ logger = "*"
 faker = "*"
 [requires]
 python_version = "3.9"
-

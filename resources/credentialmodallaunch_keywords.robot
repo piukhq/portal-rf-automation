@@ -28,7 +28,6 @@ Close Credential Modal
     click element   ${click_close}
     sleep    2
 
-
 Kill Browser
     close browser
 
