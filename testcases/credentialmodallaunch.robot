@@ -9,5 +9,6 @@ Test Teardown    Kill Browser
 
 LauchCredentialModal
     Validation Title
+
     Login Credentials
     Close Credential Modal
