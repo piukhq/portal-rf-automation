@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../pageobjects/locators.py
+Variables   ../portal_ui/pageobjects/locators.py
 
 *** Variables ***
 ${browser}  chrome
