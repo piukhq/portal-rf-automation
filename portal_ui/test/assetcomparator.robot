@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../resources/credentialmodallaunch_keywords.robot
+# Resource    portal_ui/test_resources/keywords/credentialmodallaunch_keywords.robot
+Resource    ../../portal_ui/test_resources/keywords/credentialmodallaunch_keywords.robot
 
 Test Setup    Start Browser
 Test Teardown    Kill Browser
