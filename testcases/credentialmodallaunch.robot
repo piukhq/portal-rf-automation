@@ -1,14 +1,20 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../resources/credentialmodallaunch_keywords.robot
+Library    OperatingSystem
+Resource    ../keywords/credentialmodallaunch_keywords.robot
 
-Test Setup    Start Browser
+
+Suite Setup    Include Browser Drivers
+#Test Setup    Start Browser
 Test Teardown    Kill Browser
 
 *** Test Cases ***
 
 LauchCredentialModal
+    #Include Browser Drivers
+    Setup chromedriver
+    Start Browser
     Validation Title
-
     Login Credentials
     Close Credential Modal
+   # Kill Browser
