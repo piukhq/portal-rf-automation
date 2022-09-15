@@ -10,8 +10,7 @@ verify_ssl = true
 
 [dev-packages]
 flake8 = "*"
-isort = "*"
-black = "*"
+
 
 [packages]
 requests = "*"
