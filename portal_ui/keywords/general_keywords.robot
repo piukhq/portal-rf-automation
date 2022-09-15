@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library     OperatingSystem
-Variables    ../pageobjects/locators.py
+
 
 *** Variables ***
 ${browser}  chrome
@@ -19,7 +19,6 @@ Include Browser Drivers
 Launch the Portal App
     open browser   ${url}  ${browser}
     maximize browser window
-    click element    ${click_close}
 
 
 Kill Browser
