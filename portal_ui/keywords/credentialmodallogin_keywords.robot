@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library     OperatingSystem
-Variables    ../pageobjects/locators.py
+Variables    ../pageobjects/assetcomparator_locators.py
 
 *** Variables ***
 ${browser}  chrome
@@ -11,17 +11,9 @@ ${password}    Password01
 
 *** Keywords ***
 
-Include Browser Drivers
-    Append To Environment Variable  PATH   ${EXECDIR}/portal_ui/resources/driver
-
-Setup chromedriver
-  Set Environment Variable  webdriver.chrome.driver  ${EXECDIR}/portal_ui/resources/driver/chromedriver
-  log   ${EXECDIR}/portal_ui/resources/driver/chromedriver
 
 Asset Comparator Landing page is loaded
-    open browser    ${url}  ${browser}
     wait until page contains    Enter Environment Credentials
-    maximize browser window
 
 
 I enter my email address and password in the relevant fields
@@ -32,22 +24,19 @@ I enter my email address and password in the relevant fields
 
 
 I click verify credentials button
-    click element    ${btn_verifycredential}
+    click element    ${btn_credential}
     sleep    2
 
 
 I can see credentials verified sucessfully in Dev Staging and Production environment
-    element text should be    ${label_Dev_Verified}   Verified
+    element text should be    xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[1]/div[2]/div[1]/p   Verified
     sleep    1
-    element text should be    ${label_Staging_Verified}   Verified
+    element text should be    xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/p  Verified
     sleep    1
-    element text should be    ${label_Production_Verified}    Verified
+    element text should be    xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[4]/div[2]/div[1]/p     Verified
     sleep    1
     capture page screenshot
 
 I close Credential Modal
-    click element   ${click_closebutton}
-    sleep    2
-
-Kill Browser
-    close browser
+    click element   ${btn_close}
+    sleep    1

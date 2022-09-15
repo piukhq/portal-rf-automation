@@ -1,16 +1,16 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    OperatingSystem
-Resource    ../keywords/credentialmodalloginBDD_keywords.robot
+Resource    ../keywords/credentialmodallogin_keywords.robot
+Resource    ../keywords/general_keywords.robot
 
 
 Suite Setup    Include Browser Drivers
 Test Teardown    Kill Browser
 
-
 *** Test Cases ***
 Credential Modal verify credentials
-    Setup chromedriver
+    Given Launch the Portal App
     Given Asset Comparator Landing page is loaded
     When I enter my email address and password in the relevant fields
     And I click verify credentials button
