@@ -1,98 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.2 on darwin)" generated="20220915 13:36:37.871" rpa="false" schemaversion="3">
-<suite id="s1" name="Test Customerwallet" source="/Users/navyaannajames/PycharmProjects/Portal/portal-rf-automation/portal_ui/testcases/test_customerwallet.robot">
+<robot generator="Robot 5.0.1 (Python 3.9.2 on darwin)" generated="20220915 16:29:48.586" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Credentialmodallogin" source="/Users/navyaannajames/PycharmProjects/Portal/portal-rf-automation/portal_ui/testcases/test_credentialmodallogin.robot">
 <kw name="Include Browser Drivers" library="general_keywords" type="SETUP">
 <kw name="Append To Environment Variable" library="OperatingSystem">
 <arg>PATH</arg>
 <arg>${EXECDIR}/portal_ui/resources/driver</arg>
 <doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220915 13:36:38.255" level="INFO">Environment variable 'PATH' set to value '/Users/navyaannajames/.local/share/virtualenvs/portal-rf-automation-4LjJA415/bin:/Users/navyaannajames/.pyenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/bin:/Users/navyaannajames/PycharmProjects/Portal/portal-rf-automation/portal_ui/resources/driver'.</msg>
-<status status="PASS" starttime="20220915 13:36:38.255" endtime="20220915 13:36:38.255"/>
+<msg timestamp="20220915 16:29:48.772" level="INFO">Environment variable 'PATH' set to value '/Users/navyaannajames/.local/share/virtualenvs/portal-rf-automation-4LjJA415/bin:/Users/navyaannajames/.pyenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/bin:/Users/navyaannajames/PycharmProjects/Portal/portal-rf-automation/portal_ui/resources/driver'.</msg>
+<status status="PASS" starttime="20220915 16:29:48.772" endtime="20220915 16:29:48.772"/>
 </kw>
 <kw name="Set Environment Variable" library="OperatingSystem">
 <arg>webdriver.chrome.driver</arg>
 <arg>${EXECDIR}/portal_ui/resources/driver/chromedriver</arg>
 <doc>Sets an environment variable to a specified value.</doc>
-<msg timestamp="20220915 13:36:38.255" level="INFO">Environment variable 'webdriver.chrome.driver' set to value '/Users/navyaannajames/PycharmProjects/Portal/portal-rf-automation/portal_ui/resources/driver/chromedriver'.</msg>
-<status status="PASS" starttime="20220915 13:36:38.255" endtime="20220915 13:36:38.255"/>
+<msg timestamp="20220915 16:29:48.772" level="INFO">Environment variable 'webdriver.chrome.driver' set to value '/Users/navyaannajames/PycharmProjects/Portal/portal-rf-automation/portal_ui/resources/driver/chromedriver'.</msg>
+<status status="PASS" starttime="20220915 16:29:48.772" endtime="20220915 16:29:48.772"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${EXECDIR}/portal_ui/resources/driver/chromedriver</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220915 13:36:38.255" level="INFO">/Users/navyaannajames/PycharmProjects/Portal/portal-rf-automation/portal_ui/resources/driver/chromedriver</msg>
-<status status="PASS" starttime="20220915 13:36:38.255" endtime="20220915 13:36:38.255"/>
+<msg timestamp="20220915 16:29:48.772" level="INFO">/Users/navyaannajames/PycharmProjects/Portal/portal-rf-automation/portal_ui/resources/driver/chromedriver</msg>
+<status status="PASS" starttime="20220915 16:29:48.772" endtime="20220915 16:29:48.772"/>
 </kw>
-<status status="PASS" starttime="20220915 13:36:38.255" endtime="20220915 13:36:38.256"/>
+<status status="PASS" starttime="20220915 16:29:48.771" endtime="20220915 16:29:48.773"/>
 </kw>
-<test id="s1-t1" name="Customer Wallet : JWT Token Search" line="20">
+<test id="s1-t1" name="Credential Modal verify credentials" line="12">
 <kw name="Given Launch the Portal App" library="general_keywords">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220915 13:36:38.257" level="INFO">Opening browser 'chrome' to base url 'https://portal.staging.gb.bink.com/asset-comparator'.</msg>
-<status status="PASS" starttime="20220915 13:36:38.256" endtime="20220915 13:36:43.097"/>
+<msg timestamp="20220915 16:29:48.774" level="INFO">Opening browser 'chrome' to base url 'https://portal.staging.gb.bink.com/asset-comparator'.</msg>
+<status status="PASS" starttime="20220915 16:29:48.774" endtime="20220915 16:29:53.743"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220915 13:36:43.103" endtime="20220915 13:36:43.264"/>
+<status status="PASS" starttime="20220915 16:29:53.744" endtime="20220915 16:29:53.896"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${click_close}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220915 13:36:43.265" level="INFO">Clicking element 'xpath://button[@aria-label='Close']//*[name()='svg']//*[name()='path' and contains(@fill-rule,'evenodd')]'.</msg>
-<status status="PASS" starttime="20220915 13:36:43.264" endtime="20220915 13:36:43.316"/>
+<status status="PASS" starttime="20220915 16:29:48.773" endtime="20220915 16:29:53.896"/>
 </kw>
-<status status="PASS" starttime="20220915 13:36:38.256" endtime="20220915 13:36:43.316"/>
+<kw name="Given Asset Comparator Landing page is loaded" library="credentialmodallogin_keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Enter Environment Credentials</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220915 16:29:53.898" endtime="20220915 16:29:53.909"/>
 </kw>
-<kw name="And Navigate to the Customer Wallet Page" library="customerwallet_keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${text_customer_wallet}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220915 13:36:43.318" level="INFO">Clicking element 'xpath://p[contains(text(),'Customer')]'.</msg>
-<status status="PASS" starttime="20220915 13:36:43.317" endtime="20220915 13:36:43.390"/>
+<status status="PASS" starttime="20220915 16:29:53.897" endtime="20220915 16:29:53.909"/>
 </kw>
+<kw name="When I enter my email address and password in the relevant fields" library="credentialmodallogin_keywords">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${search_box}</arg>
+<arg>${txt_loginEmail}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220915 13:36:43.390" endtime="20220915 13:36:43.412"/>
+<status status="PASS" starttime="20220915 16:29:53.910" endtime="20220915 16:29:53.929"/>
 </kw>
-<status status="PASS" starttime="20220915 13:36:43.317" endtime="20220915 13:36:43.412"/>
-</kw>
-<kw name="When Search a Jwt Token and click on Load User button" library="customerwallet_keywords">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${search_box}</arg>
-<arg>${jwt}</arg>
+<arg>${txt_loginEmail}</arg>
+<arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220915 13:36:43.413" level="INFO">Typing text 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJidW5kbGVfaWQiOiJjb20uYmluay53YWxsZXQiLCJ1c2VyX2lkIjoicG9ydGFsX3dhbGxldDEzQGJpbmsuY29tIiwic3ViIjo0MzI2MywiaWF0IjoxNjU3NjIzNDczfQ.IUMRwobgKYZR1LBaQpaRCCllC8PiwoN_xNdaSdSTATE' into text field 'id:bink-form-field-user-identifier'.</msg>
-<status status="PASS" starttime="20220915 13:36:43.412" endtime="20220915 13:36:43.855"/>
+<msg timestamp="20220915 16:29:53.929" level="INFO">Typing text 'testbink123+pl7@gmail.com' into text field 'xpath://input[@id='bink-form-field-credentials-email']'.</msg>
+<status status="PASS" starttime="20220915 16:29:53.929" endtime="20220915 16:29:54.032"/>
 </kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_loginpassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220915 16:29:54.033" level="INFO">Typing password into text field 'xpath://input[@id='bink-form-field-credentials-password']'.</msg>
+<msg timestamp="20220915 16:29:54.057" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220915 16:29:54.098" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220915 16:29:54.032" endtime="20220915 16:29:54.098"/>
+</kw>
+<status status="PASS" starttime="20220915 16:29:53.910" endtime="20220915 16:29:54.098"/>
+</kw>
+<kw name="And I click verify credentials button" library="credentialmodallogin_keywords">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${btn_load_user}</arg>
+<arg>${btn_credential}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220915 13:36:43.856" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
-<status status="PASS" starttime="20220915 13:36:43.855" endtime="20220915 13:36:43.937"/>
+<msg timestamp="20220915 16:29:54.099" level="INFO">Clicking element '//div[normalize-space()='Verify Credentials']'.</msg>
+<status status="PASS" starttime="20220915 16:29:54.099" endtime="20220915 16:29:54.136"/>
 </kw>
-<status status="PASS" starttime="20220915 13:36:43.412" endtime="20220915 13:36:43.937"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:29:56.137" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220915 16:29:54.136" endtime="20220915 16:29:56.138"/>
 </kw>
-<kw name="Then Verify the grid view of the customer wallet is displayed" library="customerwallet_keywords">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${text_wallet}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220915 13:36:43.938" endtime="20220915 13:36:43.970"/>
+<status status="PASS" starttime="20220915 16:29:54.098" endtime="20220915 16:29:56.138"/>
 </kw>
-<status status="PASS" starttime="20220915 13:36:43.937" endtime="20220915 13:36:43.970"/>
+<kw name="And I can see credentials verified sucessfully in Dev Staging and Production environment" library="credentialmodallogin_keywords">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[1]/div[2]/div[1]/p</arg>
+<arg>Verified</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220915 16:29:56.140" level="INFO">Verifying element 'xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[1]/div[2]/div[1]/p' contains exact text 'Verified'.</msg>
+<status status="PASS" starttime="20220915 16:29:56.140" endtime="20220915 16:29:56.166"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:29:57.168" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220915 16:29:56.166" endtime="20220915 16:29:57.168"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/p</arg>
+<arg>Verified</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220915 16:29:57.168" level="INFO">Verifying element 'xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/p' contains exact text 'Verified'.</msg>
+<status status="PASS" starttime="20220915 16:29:57.168" endtime="20220915 16:29:57.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:29:58.184" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220915 16:29:57.183" endtime="20220915 16:29:58.184"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[4]/div[2]/div[1]/p</arg>
+<arg>Verified</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220915 16:29:58.185" level="INFO">Verifying element 'xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[4]/div[2]/div[1]/p' contains exact text 'Verified'.</msg>
+<status status="PASS" starttime="20220915 16:29:58.185" endtime="20220915 16:29:58.207"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:29:59.209" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220915 16:29:58.207" endtime="20220915 16:29:59.209"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220915 16:29:59.515" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220915 16:29:59.210" endtime="20220915 16:29:59.515"/>
+</kw>
+<status status="PASS" starttime="20220915 16:29:56.139" endtime="20220915 16:29:59.515"/>
+</kw>
+<kw name="Then I close Credential Modal" library="credentialmodallogin_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:29:59.516" level="INFO">Clicking element 'xpath://button[@aria-label='Close']//*[name()='svg']//*[name()='path' and contains(@fill-rule,'evenodd')]'.</msg>
+<status status="PASS" starttime="20220915 16:29:59.516" endtime="20220915 16:29:59.563"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:30:01.565" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220915 16:29:59.563" endtime="20220915 16:30:01.566"/>
+</kw>
+<status status="PASS" starttime="20220915 16:29:59.515" endtime="20220915 16:30:01.566"/>
 </kw>
 <kw name="Kill Browser" library="general_keywords" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220915 13:36:43.971" endtime="20220915 13:36:44.107"/>
+<status status="PASS" starttime="20220915 16:30:01.567" endtime="20220915 16:30:01.710"/>
 </kw>
-<status status="PASS" starttime="20220915 13:36:43.971" endtime="20220915 13:36:44.107"/>
+<status status="PASS" starttime="20220915 16:30:01.566" endtime="20220915 16:30:01.711"/>
 </kw>
-<status status="PASS" starttime="20220915 13:36:38.256" endtime="20220915 13:36:44.107"/>
+<status status="PASS" starttime="20220915 16:29:48.773" endtime="20220915 16:30:01.711"/>
 </test>
-<status status="PASS" starttime="20220915 13:36:37.873" endtime="20220915 13:36:44.108"/>
+<status status="PASS" starttime="20220915 16:29:48.587" endtime="20220915 16:30:01.712"/>
 </suite>
 <statistics>
 <total>
@@ -101,7 +166,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test Customerwallet">Test Customerwallet</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Credentialmodallogin">Test Credentialmodallogin</stat>
 </suite>
 </statistics>
 <errors>
