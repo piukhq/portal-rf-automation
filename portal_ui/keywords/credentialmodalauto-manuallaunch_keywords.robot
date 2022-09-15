@@ -46,13 +46,13 @@ I see the following elements
     element should be enabled    ${txt_loginEmail}
     element should be visible    ${txt_loginPassword}
     element should be enabled    ${txt_loginPassword}
-    element should be visible    ${btn_credential}
-    element should be enabled    ${btn_credential}
+    element should be visible    ${btn_verifycredential}}
+    element should be enabled    ${btn_verifycredential}}
     element text should be    ${label_Development}  Development
     element text should be    ${label_Staging}  Staging
     element text should be    ${label_Sandbox}  Sandbox
     element text should be    ${label_Production}   Production
-    element text should be    ${label_Unverfied}    Unverified
+    element text should be    ${label_Unverified}}    Unverified
     wait until page contains    If you are struggling to verify credentials, email cmorrow@bink.com for support
 
 #I close Credential Modal

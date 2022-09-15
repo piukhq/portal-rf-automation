@@ -32,21 +32,21 @@ I enter my email address and password in the relevant fields
 
 
 I click verify credentials button
-    click element    ${btn_credential}
+    click element    ${btn_verifycredential}
     sleep    2
 
 
 I can see credentials verified sucessfully in Dev Staging and Production environment
-    element text should be    xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/p[1]   Verified
+    element text should be    ${label_Dev_Verified}   Verified
     sleep    1
-    element text should be    xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/p[1]    Verified
+    element text should be    ${label_Staging_Verified}   Verified
     sleep    1
-    element text should be    xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[4]/div[2]/div[1]/p[1]    Verified
+    element text should be    ${label_Production_Verified}    Verified
     sleep    1
     capture page screenshot
 
 I close Credential Modal
-    click element   ${click_close}
+    click element   ${click_closebutton}
     sleep    2
 
 Kill Browser
