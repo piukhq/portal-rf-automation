@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library     OperatingSystem
-Variables    ../pageobjects/locators.py
+Variables    ../pageobjects/assetcomparator_locators.py
 
 *** Variables ***
 ${browser}  chrome
@@ -10,17 +10,6 @@ ${email}    testbink123+pl7@gmail.com
 ${password}     Password01
 
 *** Keywords ***
-
-Include Browser Drivers
-    Append To Environment Variable  PATH   ${EXECDIR}/portal_ui/resources/driver
-
-Setup chromedriver
-  Set Environment Variable  webdriver.chrome.driver  ${EXECDIR}/portal_ui/resources/driver/chromedriver
-  log   ${EXECDIR}/portal_ui/resources/driver/chromedriver
-
-I have landed on the Asset Comparator Landing page
-    open browser    ${url}  ${browser}
-    maximize browser window
 
 I have not yet verified my credentials in Asset Comparator
     wait until page contains    Enter Environment Credentials
@@ -32,12 +21,12 @@ Credentials modal appears in the middle of the screen
 
 I close the Credentials modal
     sleep    5
-    click element   ${click_closebutton}
+    click element   ${btn_close}
     sleep    2
 
 I click on the Credentials button
-    click element    ${button_credentials}
-    sleep   5
+    click element    ${btn_credentials}
+    sleep   2
 
 I see the following elements
     wait until page contains    Enter Environment Credentials
@@ -46,21 +35,18 @@ I see the following elements
     element should be enabled    ${txt_loginEmail}
     element should be visible    ${txt_loginPassword}
     element should be enabled    ${txt_loginPassword}
-    element should be visible    ${btn_verifycredential}}
-    element should be enabled    ${btn_verifycredential}}
-    element text should be    ${label_Development}  Development
-    element text should be    ${label_Staging}  Staging
-    element text should be    ${label_Sandbox}  Sandbox
+    element should be visible    ${btn_verify_credential}
+    element should be enabled    ${btn_verify_credential}
+    element text should be    ${label_dev}  Development
+    element text should be    ${label_staging}  Staging
+    element text should be    ${label_sandbox}    Sandbox
     element text should be    ${label_Production}   Production
-    element text should be    ${label_Unverified}}    Unverified
+    element text should be    ${label_dev_unverified}    Unverified
+    element text should be    ${label_staging_unverified}    Unverified
+    element text should be    ${label_production_unverified}    Unverified
     wait until page contains    If you are struggling to verify credentials, email cmorrow@bink.com for support
 
-#I close Credential Modal
-    #click element   ${click_close}
-    #sleep    2
 
-Kill Browser
-    close browser
 
 
 

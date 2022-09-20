@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library     OperatingSystem
-Variables    ../pageobjects/locators.py
+Variables    ../pageobjects/assetcomparator_locators.py
 
 *** Variables ***
 ${browser}  chrome
@@ -11,12 +11,6 @@ ${password_invalid}    Password
 
 *** Keywords ***
 
-#Asset Comparator Landing page is loaded
-    ###open browser    ${url}  ${browser}
-    ##wait until page contains    Enter Environment Credentials
-    #maximize browser window
-
-
 I enter my email address and password incorrectly in the relevant fields
 
     wait until element is visible    ${txt_loginEmail}
@@ -24,15 +18,12 @@ I enter my email address and password incorrectly in the relevant fields
     input password    ${txt_loginpassword}    ${password_invalid}
 
 
-#I click verify credentials button
-    ##click element    ${btn_credential}
-    #sleep    2
 
 I get a negative response from Dev, Staging and Production
-    element text should be    ${label_Dev_Failed}    Failed
+    element text should be    ${label_dev_failed}    Failed
     sleep    1
-    element text should be    ${label_Staging_Failed}    Failed
+    element text should be    ${label_staging_failed}    Failed
     sleep    1
-    element text should be    ${label_Production_Failed}   Failed
+    element text should be    ${label_production_failed}    Failed
     sleep    1
     capture page screenshot

@@ -11,7 +11,6 @@ ${password}    Password01
 
 *** Keywords ***
 
-
 Asset Comparator Landing page is loaded
     wait until page contains    Enter Environment Credentials
 
@@ -24,16 +23,16 @@ I enter my email address and password in the relevant fields
 
 
 I click verify credentials button
-    click element    ${btn_credential}
+    click element    ${btn_verify_credential}
     sleep    2
 
 
 I can see credentials verified sucessfully in Dev Staging and Production environment
-    element text should be    xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[1]/div[2]/div[1]/p   Verified
+    element text should be    ${label_dev_verified}    Verified
     sleep    1
-    element text should be    xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/p  Verified
+    element text should be    ${label_staging_verified}    Verified
     sleep    1
-    element text should be    xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[4]/div[2]/div[1]/p     Verified
+    element text should be    ${label_production_verified}    Verified
     sleep    1
     capture page screenshot
 
