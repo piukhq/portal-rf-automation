@@ -8,12 +8,10 @@ Test Teardown    Kill Browser
 
 
 *** Test Cases ***
-
-
-#Customer Wallet : Verify the elements
-   # Given Launch the Portal App
-    #And Navigate to the Customer Wallet Page
-    #And Verify the web elements in the Customer Wallet Page
+Customer Wallet : Verify the elements
+   Given Launch the Portal App
+   And Navigate to the Customer Wallet Page
+   And Verify the web elements in the Customer Wallet Page during the page load
 
 Customer Wallet : JWT Token Search
     Given Launch the Portal App
