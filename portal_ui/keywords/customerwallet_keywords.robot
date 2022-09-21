@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library     OperatingSystem
 Variables   ../pageobjects/customerwallet_locators.py
 Variables    ../pageobjects/assetcomparator_locators.py
 
