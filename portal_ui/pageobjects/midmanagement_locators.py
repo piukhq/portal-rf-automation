@@ -1,3 +1,2 @@
 """
-This page  contains the locators for MID Management Page
-"""
+This page  contains the locators for MID Management Page"""
