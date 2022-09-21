@@ -1,6 +1,6 @@
-# Credential Modal elements
-# xpath for closing modal
-
+"""
+This page  contains the locators for Asset Comparator Page
+"""
 btn_close = "xpath://button[@aria-label='Close']//" \
               "*[name()='svg']//*[name()='path' " \
               "and contains(@fill-rule,'evenodd')]"

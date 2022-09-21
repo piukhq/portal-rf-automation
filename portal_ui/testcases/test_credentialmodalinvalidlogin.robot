@@ -1,6 +1,4 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    OperatingSystem
 Resource    ../keywords/general_keywords.robot
 Resource    ../keywords/credentialmodalinvalidlogin_keywords.robot
 Resource    ../keywords/credentialmodallogin_keywords.robot

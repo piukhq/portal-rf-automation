@@ -1,6 +1,4 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    OperatingSystem
 Resource    ../keywords/credentialmodalauto-manuallaunch_keywords.robot
 Resource    ../keywords/general_keywords.robot
 
