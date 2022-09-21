@@ -7,4 +7,3 @@ label_jwt = "xpath://span[contains(text(),'JWT')]"
 search_box = "id:bink-form-field-user-identifier"
 btn_load_user = "xpath://button[@type='submit']"
 text_wallet = "xpath://h1[contains(text(),'Wallet')]"
-
