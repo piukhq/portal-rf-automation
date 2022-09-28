@@ -26,3 +26,8 @@ label_production_failed = "xpath://*[@id='modal-download-target']/div[2]/div/div
 label_dev_verified = "xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[1]/div[2]/div[1]/p"
 label_staging_verified = "xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/p"
 label_production_verified = "xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[4]/div[2]/div[1]/p"
+
+# xpath for delete credentials
+btn_dev_delete = "xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[1]/div[2]/div[2]/button/div"
+btn_staging_delete = "xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/button/div"
+btn_production_delete = "xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[4]/div[2]/div[2]/button/div"
