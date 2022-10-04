@@ -21,10 +21,12 @@ Customer Wallet : JWT Token Search
 
 
 Customer Wallet : Verify Transaction table elements
+    [Tags]    txn
     Given Launch the Portal App
     And Navigate to the Customer Wallet Page
     When Search a Jwt Token and click on Load User button
     Then Verify the Transaction table elements
+
 
 Customer Wallet : Verify Transaction table elements
     Given Launch the Portal App
