@@ -2,12 +2,6 @@
 Library    SeleniumLibrary
 Variables    ../pageobjects/assetcomparator_locators.py
 
-*** Variables ***
-${browser}  chrome
-${url}  https://portal.staging.gb.bink.com/asset-comparator
-${email}    testbink123+pl7@gmail.com
-${password}     Password01
-
 *** Keywords ***
 
 I have not yet verified my credentials in Asset Comparator

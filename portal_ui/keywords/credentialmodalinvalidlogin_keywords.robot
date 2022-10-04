@@ -3,8 +3,6 @@ Library    SeleniumLibrary
 Variables    ../pageobjects/assetcomparator_locators.py
 
 *** Variables ***
-${browser}  chrome
-${url}  https://portal.staging.gb.bink.com/asset-comparator
 ${email_invalid}    testbink12+pl7@gmail.com
 ${password_invalid}    Password
 
