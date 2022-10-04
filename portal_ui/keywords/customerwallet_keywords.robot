@@ -29,3 +29,13 @@ Verify the web elements in the Customer Wallet Page during the page load
     wait until element is visible    ${label_jwt}
     wait until element is visible    ${search_box}
     wait until element is visible    ${btn_load_user}
+
+Verify the Transaction table elements
+    wait until element is visible    ${text_transactions}
+    wait until element is visible    ${dropdown_transactions}
+    wait until element is visible    ${text_schemes}
+    wait until element is visible    ${text_rewards}
+    wait until element is visible    ${text_date}
+    wait until element is visible    ${text_details}
+    wait until element is visible    ${text_amount}
+    wait until element is visible    ${text_change}
