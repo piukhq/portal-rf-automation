@@ -24,8 +24,8 @@ Verify the grid view of the customer wallet is displayed
 
 Verify the schemes listed in the Grid View
    wait until element is visible    ${icon_wallet_schemes}
-   ${count}=     get element count   ${icon_wallet_schemes} |
-  # log to console    ${count}
+   ${count}=     get element count   ${icon_wallet_schemes}
+   log  ${count}
 
 Verify the scheme for the card in another wallet is listed in the Grid View
      wait until element is visible    ${icon_linked_else_schemes}
@@ -36,6 +36,11 @@ Verify the web elements in the Customer Wallet Page during the page load
     wait until element is visible    ${label_jwt}
     wait until element is visible    ${search_box}
     wait until element is visible    ${btn_load_user}
+
+
+Verify the error message
+    [Arguments]    ${error_message}
+     wait until page contains        ${error_message}
 
 Verify the Transaction table elements
     wait until element is visible    ${text_transactions}
