@@ -17,10 +17,3 @@ text_date = "xpath://th[contains(text(),'DATE')]"
 text_details = "xpath://th[contains(text(),'DETAILS')]"
 text_amount = "xpath://th[contains(text(),'AMOUNT')]"
 text_change = "xpath://th[contains(text(),'CHANGE')]"
-
-
-
-
-
-
-
