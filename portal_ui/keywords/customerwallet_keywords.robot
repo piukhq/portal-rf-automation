@@ -4,9 +4,6 @@ Variables   ../pageobjects/customerwallet_locators.py
 Variables    ../pageobjects/assetcomparator_locators.py
 
 
-*** Variables ***
-${jwt}  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJidW5kbGVfaWQiOiJjb20uYmluay53YWxsZXQiLCJ1c2VyX2lkIjoicG9ydGFsX3dhbGxldDEzQGJpbmsuY29tIiwic3ViIjo0MzI2MywiaWF0IjoxNjU3NjIzNDczfQ.IUMRwobgKYZR1LBaQpaRCCllC8PiwoN_xNdaSdSTATE
-
 *** Keywords ***
 
 Navigate to the Customer Wallet Page
@@ -17,12 +14,22 @@ Navigate to the Customer Wallet Page
 
 
 Search a Jwt Token and click on Load User button
+    [Arguments]     ${jwt}
     input text    ${search_box}     ${jwt}
     click element    ${btn_load_user}
 
 
 Verify the grid view of the customer wallet is displayed
     wait until element is visible    ${text_wallet}
+
+Verify the schemes listed in the Grid View
+   wait until element is visible    ${icon_wallet_schemes}
+   ${count}=     get element count   ${icon_wallet_schemes} |
+  # log to console    ${count}
+
+Verify the scheme for the card in another wallet is listed in the Grid View
+     wait until element is visible    ${icon_linked_else_schemes}
+
 
 Verify the web elements in the Customer Wallet Page during the page load
     wait until element is visible    ${label_lookup}
@@ -33,9 +40,10 @@ Verify the web elements in the Customer Wallet Page during the page load
 Verify the Transaction table elements
     wait until element is visible    ${text_transactions}
     wait until element is visible    ${dropdown_transactions}
-    wait until element is visible    ${text_schemes}
     wait until element is visible    ${text_rewards}
     wait until element is visible    ${text_date}
     wait until element is visible    ${text_details}
     wait until element is visible    ${text_amount}
     wait until element is visible    ${text_change}
+
+
