@@ -31,3 +31,10 @@ label_production_verified = "xpath://*[@id='modal-download-target']/div[2]/div/d
 btn_dev_delete = "xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[1]/div[2]/div[2]/button/div"
 btn_staging_delete = "xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/button/div"
 btn_production_delete = "xpath://*[@id='modal-download-target']/div[2]/div/div[2]/div/div[4]/div[2]/div[2]/button/div"
+
+# xpath for plan menu
+btn_drp_planlist = "xpath://button[@aria-label='Open Menu']"
+btn_zizzi = "xpath:/html/body/div/div/div[2]/main/div[1]/div/div/div/div[2]/ul/li[251]/div/div[1]/p"
+label_zizzi_D = "xpath:/html/body/div/div/div[2]/main/div[1]/div/div/div/div[2]/ul/li[251]/div/div[2]/div[1]/div/p"
+label_zizzi_S = "xpath:/html/body/div/div/div[2]/main/div[1]/div/div/div/div[2]/ul/li[251]/div/div[2]/div[2]/div/p"
+label_zizzi_P = "xpath:/html/body/div/div/div[2]/main/div[1]/div/div/div/div[2]/ul/li[251]/div/div[2]/div[4]/div/p"
