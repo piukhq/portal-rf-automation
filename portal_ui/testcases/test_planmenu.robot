@@ -8,7 +8,7 @@ Suite Setup    Include Browser Drivers
 Test Teardown    Kill Browser
 
 *** Test Cases ***
-Credential Modal verify credentials
+Plan Menu list
     Given Launch the Portal App
     When I enter my email address and password in the relevant fields
     And I click verify credentials button
