@@ -32,7 +32,6 @@ I see the following elements
     element should be enabled    ${btn_verify_credential}
     element text should be    ${label_dev}  Development
     element text should be    ${label_staging}  Staging
-    element text should be    ${label_sandbox}    Sandbox
     element text should be    ${label_Production}   Production
     element text should be    ${label_dev_unverified}    Unverified
     element text should be    ${label_staging_unverified}    Unverified
