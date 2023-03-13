@@ -8,5 +8,3 @@ btn_next = "id:idSIButton9"
 input_password = "name:passwd"
 btn_sign_in = "xpath://input[@type='submit']"
 text_enter_env_credentials = "xpath://div/h1[contains(text(),'Enter Environment Credentials')]"
-
-
