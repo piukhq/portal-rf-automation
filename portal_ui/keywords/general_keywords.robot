@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Library     OperatingSystem
 Variables   ../pageobjects/aperturelogin_locators.py
+Variables   ../pageobjects/assetcomparator_locators.py
 
 
 
@@ -36,6 +37,7 @@ Login to Aperture using
     wait until element is visible    ${btn_sign_in}
     click button  ${btn_sign_in}
     wait until element is visible    ${text_enter_env_credentials}
+    click element   ${btn_close}
 
 Kill Browser
     close browser
