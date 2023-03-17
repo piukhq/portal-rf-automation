@@ -2,10 +2,6 @@
 Library    SeleniumLibrary
 Variables    ../pageobjects/midmanagement_locators.py
 
-*** Variables ***
-${email}    testbink123+pl7@gmail.com
-${password}    Password01
-
 *** Keywords ***
 
 Navigate to the Mid Directroy
