@@ -15,7 +15,7 @@ Click on the New plan button
    click button    ${btn_new_plan}
 
 
-Enter Plan Name in to the relevent feild
+Enter Plan Name in to the relevent field
     [Arguments]     ${plan_name}
      input text    ${input_plan_name}    ${plan_name}
 
@@ -24,7 +24,7 @@ Enter Plan ID in to the relevent feild
       input text    ${input_plan_ID}    ${plan_ID}
 
 
-Enter Slug in to the relevent feild
+Enter Slug in to the relevent field
     [Arguments]     ${plan_slug}
      input text    ${input_Plan_slug}    ${plan_slug}
 
@@ -36,6 +36,7 @@ Verify the Plan has saved sucesfully
     [Arguments]     ${plan_name}
      reload page
      wait until page contains    ${plan_name}    timeout=10s
+     sleep    2s
 
 
 Click on the three dots on the plan icon and Click on Edit
@@ -80,16 +81,6 @@ Click on delete plan button to delete the updated plan
        sleep    2s
        input text    ${txt_planName_to_delete}     ${updatedplan_name}
        click element    ${btn_delete_plan}
-
-Click on the plan view button
-     click element    ${btn_plan_view}
-
-Add new merchant for the plan
-     sleep    2s
-     click element    ${btn_new_merchant}
-
-Enter Merchant name in the relevent feild
-     input text    ${input_box_name}
 
 
 
