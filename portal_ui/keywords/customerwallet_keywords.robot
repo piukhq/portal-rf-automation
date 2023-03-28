@@ -16,6 +16,7 @@ Navigate to the Customer Wallet Page
 Search a Jwt Token and click on Load User button
     [Arguments]     ${jwt}
     input text      ${search_box}     ${jwt}
+    sleep    1s
     click element    ${btn_load_user}
 
 

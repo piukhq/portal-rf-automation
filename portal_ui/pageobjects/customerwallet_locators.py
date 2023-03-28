@@ -1,11 +1,11 @@
 """
 This page  contains the locators for Customer Wallet Page
 """
-text_customer_wallet = "xpath://p[contains(text(),'Customer')]"
+text_customer_wallet = "xpath://p[contains(text(),'CUSTOMER')]"
 label_lookup = "xpath://label[contains(text(),'Lookup')]"
 label_jwt = "xpath://span[contains(text(),'JWT')]"
 search_box = "id:bink-form-field-user-identifier"
-btn_load_user = "xpath://button[@type='submit']"
+btn_load_user = "xpath://div[@id='__next']/div/div[2]/main/div/section/form/button/div"
 text_wallet = "xpath://h1[contains(text(),'Wallet')]"
 text_transactions = "xpath: //h1[contains(text(),'Transactions')]"
 icon_wallet_schemes = "xpath://div[@id='__next']/div/div[2]/main/div/section[2]/div/div[*]/a"
