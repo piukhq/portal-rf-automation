@@ -92,8 +92,10 @@ Click on Delete Mids button
 
 
 verify that mid has deleted
-        [Arguments]      ${visa_mid}
+        [Arguments]      ${visa_mid}  ${master_mid}   ${amex_mid}
          page should not contain    ${visa_mid}
+          page should not contain    ${master_mid}
+           page should not contain     ${amex_mid}
 
 
 

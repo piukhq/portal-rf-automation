@@ -109,7 +109,7 @@ Scenario : Create Duplicate Mid and verify validation message
 
 
 
-Scenario : Create Mid and delete the MID and cancel the deletion
+Scenario : Create Mid and Bulk delete the MID and cancel the deletion
       [Tags]    MIDS     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
@@ -151,8 +151,8 @@ Scenario : Create Mid and delete the MID and cancel the deletion
 
 
 
-Scenario : Create Mid and delete the MID and Confirm the deletion
-   [Tags]    MIDS     robot:skip-on-failure
+Scenario : Create Mid and Bulk delete the MID and Confirm the deletion
+   [Tags]    MIDS    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directroy
@@ -183,9 +183,19 @@ Scenario : Create Mid and delete the MID and Confirm the deletion
     Then Enter BIN value in to the text box      ${bin_value}
     And Click on Add MID button
     And verify visa Mid added successfully    ${visa_mid}
+    ${master_mid}=  generate random string     5    [NUMBER]
+    Log    Random string: ${master_mid}
+    Then Click on Add Master Mid button and Enter MID value in to text box to add the Master Mid    ${master_mid}
+    And Click on Add MID button
+    And verify Master Mid added successfully    ${master_mid}
+    ${amex_mid}=  generate random string     5    [NUMBER]
+    Log    Random string: ${amex_mid}
+    Then Click on Amex Mid button and Enter MID value in to text box to add the Master Mid   ${amex_mid}
+    And Click on Add MID button
+    And verify Amex Mid added successfully    ${amex_mid}
     Then Select all the mids and click on delete button
     Then Click on Delete Mids button
-    Then verify that mid has deleted    ${visa_mid}
+    Then verify that mid has deleted    ${visa_mid}  ${master_mid}   ${amex_mid}
     Then Delete the Merchant by selecting three dots options from the Mids screen    ${merchant_name}
     And verify merchant has deleted successfully    ${merchant_name}
     And Delete plan by selecting on delete option from three dots on merchant page      ${plan_name}
