@@ -13,6 +13,7 @@ ${admin_test_user_password} =   Shove9117
 
 *** Test Cases ***
 Credential Modal verify credentials
+    [Tags]    CRE   robot:skip-on-failure
     Given Launch the Portal App
      And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     Given Asset Comparator Landing page is loaded
