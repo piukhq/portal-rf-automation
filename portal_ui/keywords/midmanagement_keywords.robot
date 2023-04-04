@@ -36,7 +36,8 @@ Verify the Plan has saved sucesfully
     [Arguments]     ${plan_name}
      reload page
      wait until page contains    ${plan_name}    timeout=10s
-     sleep    2s
+     sleep    1s
+
 
 
 Click on the three dots on the plan icon and Click on Edit
