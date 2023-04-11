@@ -40,7 +40,7 @@ Verify the Plan has saved sucesfully
 
 
 
-Click on the three dots on the plan icon and Click on Edit
+Click on the three dots on the plan icon
      sleep    2s
      click element    ${btn_threeDots}
 
@@ -82,6 +82,61 @@ Click on delete plan button to delete the updated plan
        sleep    2s
        input text    ${txt_planName_to_delete}     ${updatedplan_name}
        click element    ${btn_delete_plan}
+
+
+
+
+Click on Add comment button
+      click element    ${btn_comments}
+      sleep    2s
+
+
+Add a comment and click on enter
+     [Arguments]     ${comment}
+       input text    ${txt_add_comment}      ${comment}
+       click element    ${btn_add_comment_submit}
+
+
+
+verify comment has added successfully
+         [Arguments]     ${comment}
+      wait until page contains      ${comment}     timeout=10s
+
+
+close the Comment dialog box
+       click element    ${btn_close_comment}
+
+Edit the comment
+      [Arguments]     ${updated_comment}
+      sleep    2s
+      click element  ${txt_option_threedots_comments}
+      click element    ${btn_option_edit_comment}
+      press keys    ${txt_updat_commentlabel}    CTRL+a
+      press keys    ${txt_updat_commentlabel}    BACKSPACE
+      wait until element is visible    ${txt_updat_commentlabel}     timeout=10s
+      wait until element is enabled    ${txt_updat_commentlabel}
+      click element    ${txt_updat_commentlabel}
+      input text    ${txt_updat_commentlabel}    ${updated_comment}
+      press key    ${txt_updat_commentlabel}     \\13
+
+
+verify the comment has updated
+       [Arguments]     ${update_comment}
+       wait until page contains      ${update_comment}     timeout=10s
+
+
+
+Click on Delete option to delete the comment
+        click element    ${btn_delete_comment}
+
+
+verify the comment has deleted
+       [Arguments]     ${comment}
+        page should contain  ${comment}    timeout=10s
+
+
+click on the option three dots icon on the comment dialog box
+      click element    ${txt_option_threedots_comments}
 
 
 
