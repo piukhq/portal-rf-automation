@@ -28,7 +28,5 @@ txt_option_threedots_comments = "xpath://div/div/div[1]/div[2]/div/div/div[2]/di
 btn_option_edit_comment = "xpath://*[@id='modal-download-target']/div[2]/div/div/div[2]/div/section[1]/section/div/" \
                                                                "div/div/div/div[1]/div/div/div[2]/div/div[1]/button[1]"
 txt_updat_commentlabel = "id:Edit comment textarea"
-btn_delete_comment = "xpath://*[@id='modal-download-target']/div[2]/div/div/div[2]/div/section[1]/section/div/div/div/" \
-                                                          "div/div[1]/div/div/div[2]/div/div[1]/button[2]"
-
-
+btn_delete_comment = "xpath://*[@id='modal-download-target']/div[2]/div/div/div[2]/div/section[1]/section/div/div/" \
+                     "div/div/div[1]/div/div/div[2]/div/div[1]/button[2]"
