@@ -19,23 +19,23 @@ Scenario:Create Plan, view paln and add two merchants and veiw Merchants and del
     [Tags]    MER     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
-    And Navigate to the Mid Directroy
+    And Navigate to the Mid Directory
     Then Click on the New plan button
     ${plan_name}=    generate random string     6   [LETTERS]
     Log    Random string: ${plan_name}
-    Then Enter Plan Name in to the relevent field    ${plan_name}
+    Then Enter Plan Name in to the relevant field    ${plan_name}
     ${plan_ID}=  generate random string     9    [NUMBERS]
     Log    Random string: ${plan_ID}
-    And Enter Plan ID in to the relevent feild   ${plan_ID}
+    And Enter Plan ID in to the relevant field   ${plan_ID}
     ${plan_slug}    generate random string    10    [LETTERS]
-    And Enter Slug in to the relevent field   ${plan_slug}
+    And Enter Slug in to the relevant field   ${plan_slug}
     Then Click on the Add plan button
-    And Verify the Plan has saved sucesfully    ${plan_name}
+    And Verify the Plan has saved successfully    ${plan_name}
     And Click on view button to view the plan detail page
     Then Add new Merchant by clicking on New Merchant button
     ${merchant_name}=  generate random string     9    [LETTERS]
     Log    Random string: ${merchant_name}
-    And Enter name of the merchant in to relevant feild    ${merchant_name}
+    And Enter name of the merchant in to relevant field    ${merchant_name}
     Then Save the merchant by clicking on Add Merchant button
     And verify merchant has saved successfully    ${merchant_name}
     Then Add new Merchant by clicking on New Merchant button
@@ -53,23 +53,23 @@ Scenario: Add plan and View plan , Add merchant and Edit merchant and delete the
     [Tags]    MER    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
-    And Navigate to the Mid Directroy
+    And Navigate to the Mid Directory
     Then Click on the New plan button
     ${plan_name}=    generate random string     6   [LETTERS]
     Log    Random string: ${plan_name}
-    Then Enter Plan Name in to the relevent field    ${plan_name}
+    Then Enter Plan Name in to the relevant field    ${plan_name}
     ${plan_ID}=  generate random string     9    [NUMBERS]
     Log    Random string: ${plan_ID}
-    And Enter Plan ID in to the relevent feild   ${plan_ID}
+    And Enter Plan ID in to the relevant field   ${plan_ID}
     ${plan_slug}    generate random string    10    [LETTERS]
-    And Enter Slug in to the relevent field   ${plan_slug}
+    And Enter Slug in to the relevant field   ${plan_slug}
     Then Click on the Add plan button
     And Verify the Plan has saved sucesfully    ${plan_name}
     And Click on view button to view the plan detail page
     Then Add new Merchant by clicking on New Merchant button
     ${merchant_name}=  generate random string     1    [LETTERS]
     Log    Random string: ${merchant_name}
-    And Enter name of the merchant in to relevant feild    ${merchant_name}
+    And Enter name of the merchant in to relevant field    ${merchant_name}
     Then Save the merchant by clicking on Add Merchant button
     And verify merchant has saved successfully    ${merchant_name}
     Then Click on Edit Merchant from three dots options menu near the Merchant
@@ -83,26 +83,26 @@ Scenario: Add plan and View plan , Add merchant and Edit merchant and delete the
 
 
 Scenario : Add Merchant and delete Merchant
-     [Tags]    MER     robot:skip-on-failure
+     [Tags]    MER    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
-    And Navigate to the Mid Directroy
+    And Navigate to the Mid Directory
     Then Click on the New plan button
     ${plan_name}=    generate random string     6   [LETTERS]
     Log    Random string: ${plan_name}
-    Then Enter Plan Name in to the relevent field    ${plan_name}
+    Then Enter Plan Name in to the relevant field    ${plan_name}
     ${plan_ID}=  generate random string     9    [NUMBERS]
     Log    Random string: ${plan_ID}
-    And Enter Plan ID in to the relevent feild   ${plan_ID}
+    And Enter Plan ID in to the relevant field   ${plan_ID}
     ${plan_slug}    generate random string    10    [LETTERS]
-    And Enter Slug in to the relevent field   ${plan_slug}
+    And Enter Slug in to the relevant field   ${plan_slug}
     Then Click on the Add plan button
-    And Verify the Plan has saved sucesfully    ${plan_name}
+    And Verify the Plan has saved successfully    ${plan_name}
     And Click on view button to view the plan detail page
     Then Add new Merchant by clicking on New Merchant button
     ${merchant_name}=  generate random string     5    [LETTERS]
     Log    Random string: ${merchant_name}
-    And Enter name of the merchant in to relevant feild    ${merchant_name}
+    And Enter name of the merchant in to relevant field    ${merchant_name}
     Then Save the merchant by clicking on Add Merchant button
     And verify merchant has saved successfully    ${merchant_name}
     Then Click on three dots options menu near the Merchant

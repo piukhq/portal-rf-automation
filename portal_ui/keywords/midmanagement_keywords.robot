@@ -4,7 +4,7 @@ Variables    ../pageobjects/midmanagement_locators.py
 
 *** Keywords ***
 
-Navigate to the Mid Directroy
+Navigate to the Mid Directory
      click element    ${label_mid}
 
 
@@ -15,16 +15,16 @@ Click on the New plan button
    click button    ${btn_new_plan}
 
 
-Enter Plan Name in to the relevent field
+Enter Plan Name in to the relevant field
     [Arguments]     ${plan_name}
      input text    ${input_plan_name}    ${plan_name}
 
-Enter Plan ID in to the relevent feild
+Enter Plan ID in to the relevant field
     [Arguments]     ${plan_ID}
       input text    ${input_plan_ID}    ${plan_ID}
 
 
-Enter Slug in to the relevent field
+Enter Slug in to the relevant field
     [Arguments]     ${plan_slug}
      input text    ${input_Plan_slug}    ${plan_slug}
 
@@ -32,7 +32,7 @@ Enter Slug in to the relevent field
 Click on the Add plan button
      click element    ${btn_add_plan}
 
-Verify the Plan has saved sucesfully
+Verify the Plan has saved successfully
     [Arguments]     ${plan_name}
      reload page
      wait until page contains    ${plan_name}    timeout=10s

@@ -18,38 +18,38 @@ Scenario: Create New Plan and Delete the plan
     [Tags]    MID     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
-    And Navigate to the Mid Directroy
+    And Navigate to the Mid Directory
     Then Click on the New plan button
     ${plan_name}=    generate random string     10    [UPPER]
     Log    Random string: ${plan_name}
-    Then Enter Plan Name in to the relevent field    ${plan_name}
+    Then Enter Plan Name in to the relevant field    ${plan_name}
     ${plan_ID}=  generate random string     9    [NUMBERS]
     Log    Random string: ${plan_ID}
-    And Enter Plan ID in to the relevent feild   ${plan_ID}
+    And Enter Plan ID in to the relevant field   ${plan_ID}
     ${plan_slug}    generate random string    10    [LETTERS]
-    And Enter Slug in to the relevent field   ${plan_slug}
+    And Enter Slug in to the relevant field   ${plan_slug}
     Then Click on the Add plan button
-    And Verify the Plan has saved sucesfully    ${plan_name}
+    And Verify the Plan has saved successfully    ${plan_name}
     Then Click on the three dots on the plan icon
     And Click on delete plan button to delete the created plan      ${plan_name}
 
 
-Scenario: Create New Plan and Edit the paln and Delete
+Scenario: Create New Plan and Edit the plan and Delete
     [Tags]    MID     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
-    And Navigate to the Mid Directroy
+    And Navigate to the Mid Directory
     Then Click on the New plan button
     ${plan_name}=    generate random string     1   [UPPER]
     Log    Random string: ${plan_name}
-    Then Enter Plan Name in to the relevent field    ${plan_name}
+    Then Enter Plan Name in to the relevant field    ${plan_name}
     ${plan_ID}=  generate random string     9    [NUMBERS]
     Log    Random string: ${plan_ID}
-    And Enter Plan ID in to the relevent feild   ${plan_ID}
+    And Enter Plan ID in to the relevant field   ${plan_ID}
     ${plan_slug}    generate random string    10    [LETTERS]
-    And Enter Slug in to the relevent field   ${plan_slug}
+    And Enter Slug in to the relevant field   ${plan_slug}
     Then Click on the Add plan button
-    And Verify the Plan has saved sucesfully    ${plan_name}
+    And Verify the Plan has saved successfully    ${plan_name}
     Then Click on the three dots on the plan icon
     And Click on the Edit plan
     ${updagtedplan_name}=    generate random string     4    [UPPER]
@@ -66,18 +66,18 @@ Scenario: Create New Plan and Add a comment to plan
     [Tags]    MID     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
-    And Navigate to the Mid Directroy
+    And Navigate to the Mid Directory
     Then Click on the New plan button
     ${plan_name}=    generate random string     10   [LETTERS]
     Log    Random string: ${plan_name}
-    Then Enter Plan Name in to the relevent field    ${plan_name}
+    Then Enter Plan Name in to the relevant field    ${plan_name}
     ${plan_ID}=  generate random string     9    [NUMBERS]
     Log    Random string: ${plan_ID}
-    And Enter Plan ID in to the relevent feild   ${plan_ID}
+    And Enter Plan ID in to the relevant field   ${plan_ID}
     ${plan_slug}    generate random string    10    [LETTERS]
-    And Enter Slug in to the relevent field   ${plan_slug}
+    And Enter Slug in to the relevant field   ${plan_slug}
     Then Click on the Add plan button
-    And Verify the Plan has saved sucesfully    ${plan_name}
+    And Verify the Plan has saved successfully    ${plan_name}
     Then Click on the three dots on the plan icon
     And Click on Add comment button
     ${comment}=  generate random string     1    [LETTERS]
@@ -90,21 +90,21 @@ Scenario: Create New Plan and Add a comment to plan
 
 
 Scenario: Create New Plan and Add and Edit comment to plan
-    [Tags]    MID    robot:skip-on-failure
+    [Tags]    MID1    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
-    And Navigate to the Mid Directroy
+    And Navigate to the Mid Directory
     Then Click on the New plan button
     ${plan_name}=    generate random string     10   [LETTERS]
     Log    Random string: ${plan_name}
-    Then Enter Plan Name in to the relevent field    ${plan_name}
+    Then Enter Plan Name in to the relevant field    ${plan_name}
     ${plan_ID}=  generate random string     9    [NUMBERS]
     Log    Random string: ${plan_ID}
-    And Enter Plan ID in to the relevent feild   ${plan_ID}
+    And Enter Plan ID in to the relevant field   ${plan_ID}
     ${plan_slug}    generate random string    10    [LETTERS]
-    And Enter Slug in to the relevent field   ${plan_slug}
+    And Enter Slug in to the relevant field   ${plan_slug}
     Then Click on the Add plan button
-    And Verify the Plan has saved sucesfully    ${plan_name}
+    And Verify the Plan has saved successfully    ${plan_name}
     Then Click on the three dots on the plan icon
     And Click on Add comment button
     ${comment}=  generate random string     1    [LETTERS]
@@ -127,18 +127,18 @@ Scenario: Create New Plan and Add a comment and delete comment to plan
       [Tags]    MID     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
-    And Navigate to the Mid Directroy
+    And Navigate to the Mid Directory
     Then Click on the New plan button
     ${plan_name}=    generate random string     10   [LETTERS]
     Log    Random string: ${plan_name}
-    Then Enter Plan Name in to the relevent field    ${plan_name}
+    Then Enter Plan Name in to the relevant field    ${plan_name}
     ${plan_ID}=  generate random string     9    [NUMBERS]
     Log    Random string: ${plan_ID}
-    And Enter Plan ID in to the relevent feild   ${plan_ID}
+    And Enter Plan ID in to the relevant field   ${plan_ID}
     ${plan_slug}    generate random string    10    [LETTERS]
-    And Enter Slug in to the relevent field   ${plan_slug}
+    And Enter Slug in to the relevant field   ${plan_slug}
     Then Click on the Add plan button
-    And Verify the Plan has saved sucesfully    ${plan_name}
+    And Verify the Plan has saved successfully    ${plan_name}
     Then Click on the three dots on the plan icon
     And Click on Add comment button
     ${comment}=  generate random string     10    [LETTERS]

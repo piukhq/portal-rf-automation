@@ -23,8 +23,7 @@ btn_comments = "xpath://*[@id='__next']/div/div[2]/main/div[2]/div/div[1]/div[1]
 txt_add_comment = "xpath://*[@id='Add comment textarea']"
 btn_add_comment_submit = "xpath://*[@id='Add comment submit-button'] "
 btn_close_comment = "xpath://*[@id='modal-download-target']/div[2]/div/div/div[1]/button"
-txt_option_threedots_comments = "xpath://div/div/div[1]/div[2]/div/div/div[2]/div/section[1]/" \
-                                "section/div/div/div/div/div[1]/div/div/div[2]/div/button"
+txt_option_threedots_comments = "id:Options"
 btn_option_edit_comment = "xpath://*[@id='modal-download-target']/div[2]/div/div/div[2]/div/section[1]/section/div/" \
                                                                "div/div/div/div[1]/div/div/div[2]/div/div[1]/button[1]"
 txt_updat_commentlabel = "id:Edit comment textarea"

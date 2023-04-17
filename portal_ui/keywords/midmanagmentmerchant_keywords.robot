@@ -14,7 +14,7 @@ Add new Merchant by clicking on New Merchant button
      click element   ${btn_add_merchant}
      sleep    2s
 
-Enter name of the merchant in to relevant feild
+Enter name of the merchant in to relevant field
      [Arguments]     ${merchant_name}
      input text    ${txt_input_merchant_name}    ${merchant_name}
 
