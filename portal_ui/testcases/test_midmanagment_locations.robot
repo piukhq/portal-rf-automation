@@ -6,7 +6,7 @@ Resource    ../keywords/midmanagmentmerchants_mids_keywords.robot
 Resource    ../keywords/midmanagmentmerchants_locations_keywords.robot
 Library     String
 Library    SeleniumLibrary
-Library    Selenium2Library
+
 
 Suite Setup    Include Browser Drivers
 Test Teardown    Kill Browser
