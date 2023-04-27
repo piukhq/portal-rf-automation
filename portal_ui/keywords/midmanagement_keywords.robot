@@ -5,6 +5,7 @@ Variables    ../pageobjects/midmanagement_locators.py
 *** Keywords ***
 
 Navigate to the Mid Directory
+     sleep    1s
      click element    ${label_mid}
 
 
@@ -88,11 +89,12 @@ Click on delete plan button to delete the updated plan
 
 Click on Add comment button
       click element    ${btn_comments}
-      sleep    2s
+      sleep    5s
 
 
 Add a comment and click on enter
      [Arguments]     ${comment}
+     sleep    1s
        input text    ${txt_add_comment}      ${comment}
        click element    ${btn_add_comment_submit}
 

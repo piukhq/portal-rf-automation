@@ -9,6 +9,7 @@ I select the button to delete credentials in Dev,Staging and Production environm
     sleep    1
     click element    ${btn_staging_delete}
     sleep    1
+    scroll element into view     ${btn_production_delete}
     click element    ${btn_production_delete}
     sleep    1
 
