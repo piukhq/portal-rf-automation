@@ -2,6 +2,8 @@
 Resource    ../keywords/general_keywords.robot
 Resource    ../keywords/midmanagement_keywords.robot
 Resource    ../keywords/midmanagmentmerchant_keywords.robot
+Resource    ../keywords/midmanagmentmerchants_locations_keywords.robot
+
 Resource    ../keywords/midmanagmentmerchants_mids_keywords.robot
 Library     String
 Library    SeleniumLibrary
@@ -129,7 +131,7 @@ Scenario : Create Mid and Bulk delete the MID and cancel the deletion and verify
     Then Add new Merchant by clicking on New Merchant button
     ${merchant_name}=  generate random string     5    [LETTERS]
     Log    Random string: ${merchant_name}
-    And Enter name of the merchant in to relevant feild    ${merchant_name}
+    And Enter name of the merchant in to relevant field    ${merchant_name}
     Then Save the merchant by clicking on Add Merchant button
     And verify merchant has saved successfully    ${merchant_name}
     Then Click on view button from the merchant detail screen

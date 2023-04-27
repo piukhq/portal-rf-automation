@@ -8,7 +8,7 @@ Variables   ../pageobjects/assetcomparator_locators.py
 
 *** Variables ***
 ${browser}  chrome
-${url}  https://portal.staging.gb.bink.com/asset-comparator
+${url}  https://portal.staging.gb.bink.com/
 ${org_name}     Bink
 
 
@@ -36,8 +36,12 @@ Login to Aperture using
     input text    ${input_password}     ${admin_test_user_password}
     wait until element is visible    ${btn_sign_in}
     click button  ${btn_sign_in}
-    wait until element is visible    ${text_enter_env_credentials}
-    click element   ${btn_close}
+#    wait until element is visible    ${text_enter_env_credentials}
+#    click element   ${btn_close}
+
+
+Click on the asset Comparator
+       click element    ${btn_asset_comparator}
 
 Kill Browser
     close browser

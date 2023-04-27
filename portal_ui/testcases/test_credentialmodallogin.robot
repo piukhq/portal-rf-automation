@@ -16,6 +16,7 @@ Credential Modal verify credentials
     [Tags]    CRE   robot:skip-on-failure
     Given Launch the Portal App
      And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
+     Then Click on the asset Comparator
     Given Asset Comparator Landing page is loaded
     When I enter my email address and password in the relevant fields
     And I click verify credentials button

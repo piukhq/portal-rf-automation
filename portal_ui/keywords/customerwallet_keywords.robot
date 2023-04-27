@@ -7,7 +7,8 @@ Variables    ../pageobjects/assetcomparator_locators.py
 *** Keywords ***
 
 Navigate to the Customer Wallet Page
-    click element    ${btn_close}
+#    click element    ${btn_close}
+     sleep    1s
     click element  ${text_customer_wallet}
     wait until element is visible    ${search_box}
 
