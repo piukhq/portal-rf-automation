@@ -19,9 +19,3 @@ btn_yesDelete_mid = "xpath://*[@id='Delete Secondary MID']/div"
 btn_comment = "id:Comments"
 btn_edit_comment = "xpath://*[@id='modal-download-target']/div[2]/div/div/div[2]/div[1]/div/" \
                    "div/section[1]/section/div/div/div/div/div[1]/div/div/div[2]/div/div/div[1]/button[1]"
-
-
-
-
-
-
