@@ -7,6 +7,7 @@ Resource    ../keywords/midmanagmentmerchants_locations_keywords.robot
 Resource    ../keywords/midmanagmentmerchants_secondarymids_keywords.robot
 Library     String
 Library    SeleniumLibrary
+Library    FakerLibrary  locale=de_DE    seed=124
 
 
 Suite Setup    Include Browser Drivers
@@ -59,6 +60,11 @@ Scenario :Add Secondary Visa and Master Mids to the merchant and Bulk delete the
     Log    Random string: ${master_Secmid}
     And Click on Add Master button and enter Master secondary Mids    ${master_Secmid}
     Then Verify visa and master secondary Mids added successfully     ${visa_Secmid}     ${master_Secmid}
+    Then select all the mids and clcik on delete
+    ${words}=  FakerLibrary.Words
+    And Click on delete button    ${words}
+    Then Click on Delete SecondaryMids button
+    Then verify SecondaryMids deleted successfully    ${visa_Secmid}     ${master_Secmid}
     Then Delete the Merchant by selecting three dots options from the Mids screen    ${merchant_name}
     And verify merchant has deleted successfully    ${merchant_name}
     And Delete plan by selecting on delete option from three dots on merchant page      ${plan_name}

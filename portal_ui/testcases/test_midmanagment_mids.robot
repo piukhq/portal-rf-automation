@@ -7,6 +7,7 @@ Resource    ../keywords/midmanagmentmerchants_locations_keywords.robot
 Resource    ../keywords/midmanagmentmerchants_mids_keywords.robot
 Library     String
 Library    SeleniumLibrary
+Library    FakerLibrary  locale=de_DE    seed=124
 
 
 Suite Setup    Include Browser Drivers
@@ -143,7 +144,7 @@ Scenario : Create Mid and Bulk delete the MID and cancel the deletion and verify
     Then Enter BIN value in to the text box      ${bin_value}
     And Click on Add MID button
     And verify visa Mid added successfully    ${visa_mid}
-    Then Select all the mids and click on delete button
+    Then select all the mids and clcik on delete
     Then Close the Delete Mids dialog box
     And verify the Mid has not deleted    ${visa_mid}
     Then Delete the Merchant by selecting three dots options from the Mids screen    ${merchant_name}
@@ -194,8 +195,9 @@ Scenario : Create Mid and Bulk delete the MID and Confirm the deletion and Mids 
     Log    Random string: ${amex_mid}
     Then Click on Amex Mid button and Enter MID value in to text box to add the Master Mid   ${amex_mid}
     And Click on Add MID button
-    And verify Amex Mid added successfully    ${amex_mid}
-    Then Select all the mids and click on delete button
+    Then select all the mids and clcik on delete
+    ${words}=  FakerLibrary.Words
+    And Click on delete button    ${words}
     Then Click on Delete Mids button
     Then verify that mid has deleted    ${visa_mid}  ${master_mid}   ${amex_mid}
     Then Delete the Merchant by selecting three dots options from the Mids screen    ${merchant_name}

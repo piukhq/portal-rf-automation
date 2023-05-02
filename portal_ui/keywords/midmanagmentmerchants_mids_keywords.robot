@@ -24,6 +24,7 @@ Enter BIN value in to the text box
 
 Click on Add MID button
        click element    ${btn_Add_mid}
+       sleep    2s
 
 
 
@@ -69,7 +70,7 @@ Delete the Merchant by selecting three dots options from the Mids screen
        sleep    1s
        input text    ${txt_input_merchant_name}     ${merchant_name}
        click element    ${btn_delete_merchant}
-       sleep    4s
+       sleep    3s
 
 
 Verify validation message displayed when we enter the duplicate Mid value
@@ -80,11 +81,18 @@ close the Visa mid dialog box
      click element    ${btn_close}
 
 
-Select all the mids and click on delete button
+select all the mids and clcik on delete
      click element    ${checkbox_selectall_mids}
      sleep    1s
      click element    ${btn_delete_mids}
-     sleep    1s
+     sleep    2s
+
+
+Click on delete button
+    [Arguments]     ${words}
+     input text    ${btn_reason}    ${words}
+
+
 
 Click on Delete Mids button
       click element    ${btn_delete_mids_dialog_box}

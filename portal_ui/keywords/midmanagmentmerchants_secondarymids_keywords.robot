@@ -90,3 +90,14 @@ edit comments
       press key    ${txt_updat_commentlabel}     \\13
 
 
+Click on Delete SecondaryMids button
+       click element    ${btn_delete_secondary_mids}
+
+verify SecondaryMids deleted successfully
+     [Arguments]     ${visa_Secmid}   ${master_Secmid}
+            wait until page does not contain    ${visa_Secmid}    timeout=10s
+             wait until page does not contain    ${master_Secmid}    timeout=10s
+             sleep    1s
+
+
+

@@ -86,6 +86,7 @@ Close the locataion details page
 Verify SubLocation is saved successfully
            [Arguments]        ${sublocationName}
         wait until page contains      ${sublocationName}     timeout=10s
+        sleep    2s
 
 
 Click on Edit button to update the location
@@ -153,6 +154,16 @@ Verify the validation messages displayed new location
      wait until page contains    Enter name
      sleep    1s
      wait until page contains    Enter location ID
+
+
+Click on Delete Location button
+        click element    ${btn_delete_Locations}
+
+verify Locations deleted successfully
+         [Arguments]        ${locationName}     ${sublocationName}
+         wait until page does not contain    ${locationName}
+         wait until page does not contain    ${sublocationName}
+
 
 
 
