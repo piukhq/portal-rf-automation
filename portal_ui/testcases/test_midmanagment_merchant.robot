@@ -64,10 +64,10 @@ Scenario: Add plan and View plan , Add merchant and Edit merchant and delete the
     ${plan_slug}    generate random string    10    [LETTERS]
     And Enter Slug in to the relevant field   ${plan_slug}
     Then Click on the Add plan button
-    And Verify the Plan has saved sucesfully    ${plan_name}
+    And Verify the Plan has saved successfully   ${plan_name}
     And Click on view button to view the plan detail page
     Then Add new Merchant by clicking on New Merchant button
-    ${merchant_name}=  generate random string     1    [LETTERS]
+    ${merchant_name}=  generate random string     2    [LETTERS]
     Log    Random string: ${merchant_name}
     And Enter name of the merchant in to relevant field    ${merchant_name}
     Then Save the merchant by clicking on Add Merchant button

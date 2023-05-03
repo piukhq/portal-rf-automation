@@ -13,6 +13,7 @@ btn_midspage_option_delete = "xpath://*[@id='main-content']/div[1]/div[2]/div[2]
 txt_input_merchant_name = "xpath://*[@id='bink-form-field-merchant-name']"
 btn_close = "xpath://*[@id='modal-download-target']/div[2]/div/div/div[1]/button"
 checkbox_selectall_mids = "xpath://*[@id='__next']/div/div[2]/main/div[2]/div/table/thead/tr/th[1]/div/input"
+btn_reason = "id:bink-form-field-deletion-reason"
 btn_delete_mids = "xpath://*[@id='Delete-button']"
 btn_delete_close = "xpath://*[@id='modal-download-target']/div[2]/div/div/div[1]/button"
 btn_delete_mids_dialog_box = "xpath://html/body/div/div/div[1]/div[2]/div/div/div[2]/section[2]/button"

@@ -4,7 +4,6 @@ Resource    ../keywords/midmanagement_keywords.robot
 Library     String
 Library    SeleniumLibrary
 
-
 Suite Setup    Include Browser Drivers
 Test Teardown    Kill Browser
 
@@ -90,7 +89,7 @@ Scenario: Create New Plan and Add a comment to plan
 
 
 Scenario: Create New Plan and Add and Edit comment to plan
-    [Tags]    MID1    robot:skip-on-failure
+    [Tags]    MID    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory

@@ -72,6 +72,9 @@ Update the Merchant name
       input text    ${txt_input_merchant_name}    ${updatedMerchant_name}
       ${text}=        get value     ${txt_input_merchant_name}
       Log             ${text}
+     sleep    1s
+
+
 
 
 Click on the Save changes button in Edit merchant dialog box

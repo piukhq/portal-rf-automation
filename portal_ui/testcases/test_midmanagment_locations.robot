@@ -6,6 +6,7 @@ Resource    ../keywords/midmanagmentmerchants_mids_keywords.robot
 Resource    ../keywords/midmanagmentmerchants_locations_keywords.robot
 Library     String
 Library    SeleniumLibrary
+Library    FakerLibrary  locale=de_DE    seed=124
 
 
 Suite Setup    Include Browser Drivers
@@ -62,8 +63,8 @@ Scenario : Add Location to the merchant by entering all Physical location detail
     And Verify plan has deleted from the plan page       ${plan_name}
 
 
-Scenario : Add Location and a sub location with the physical location details
-      [Tags]    LOC    robot:skip-on-failure
+Scenario : Add Location and a sub location with the physical location details and do the bulk deletion
+      [Tags]    LOC1    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -104,6 +105,11 @@ Scenario : Add Location and a sub location with the physical location details
     Then click on save button
     And Close the locataion details page
     Then Verify SubLocation is saved successfully    ${sublocationName}
+    Then select all the mids and clcik on delete
+    ${words}=  FakerLibrary.Words
+    And Click on delete button    ${words}
+    Then Click on Delete Location button
+    Then verify Locations deleted successfully    ${locationName}     ${sublocationName}
     Then Click on three dots options menu in the location page
     And Delete the merchant by selecting Delete option    ${merchant_name}
     Then verify merchant has deleted successfully    ${merchant_name}
