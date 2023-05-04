@@ -96,7 +96,9 @@ Add a comment and click on enter
      [Arguments]     ${comment}
      sleep    1s
        input text    ${txt_add_comment}      ${comment}
+       sleep    2s
        click element    ${btn_add_comment_submit}
+
 
 
 
@@ -104,27 +106,29 @@ verify comment has added successfully
          [Arguments]     ${comment}
       wait until page contains      ${comment}     timeout=10s
 
+verify the comment has updated
+       [Arguments]    ${updated_comment}
+       wait until page contains    ${updated_comment}
 
 close the Comment dialog box
        click element    ${btn_close_comment}
+       sleep    3s
 
-Edit the comment
-      [Arguments]     ${updated_comment}
+Reply to the comment
+      [Arguments]     ${Reply_comment}
       sleep    2s
       click element  ${txt_option_threedots_comments}
       click element    ${btn_option_edit_comment}
-      press keys    ${txt_updat_commentlabel}    CTRL+a
-      press keys    ${txt_updat_commentlabel}    BACKSPACE
-      wait until element is visible    ${txt_updat_commentlabel}     timeout=10s
-      wait until element is enabled    ${txt_updat_commentlabel}
-      click element    ${txt_updat_commentlabel}
-      input text    ${txt_updat_commentlabel}    ${updated_comment}
-      press key    ${txt_updat_commentlabel}     \\13
+      sleep    3s
+      click element    ${btn_reply}
+      input text    ${txt_reply_commentfield}    ${Reply_comment}
+      click element    ${btn_reply_comment_submit}
 
 
-verify the comment has updated
-       [Arguments]     ${update_comment}
-       wait until page contains      ${update_comment}     timeout=10s
+
+verify the comment has Replied
+       [Arguments]    ${Reply_comment}
+       wait until page contains     ${Reply_comment}     timeout=10s
 
 
 

@@ -155,7 +155,7 @@ Scenario : Create Mid and Bulk delete the MID and cancel the deletion and verify
 
 
 Scenario : Create Mid and Bulk delete the MID and Confirm the deletion and Mids are deleted
-   [Tags]    MIDS    robot:skip-on-failure
+   [Tags]    MIDS1    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
