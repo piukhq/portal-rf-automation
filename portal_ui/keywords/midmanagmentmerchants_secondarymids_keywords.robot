@@ -61,6 +61,7 @@ Unlink the Linked Location
        click element    ${btn_unlink}
        sleep    1s
        click element    ${btn_yesunlink}
+       sleep    2s
 
 
 
@@ -68,7 +69,7 @@ Delete the Mid and verify Mid was deleted
       [Arguments]      ${visa_Secmid}
          click element    ${btn_delete_mid}
          click element    ${btn_yesDelete_mid}
-           page should contain    ${visa_Secmid}
+           page should not contain    ${visa_Secmid}
            sleep    2s
 
 
@@ -87,7 +88,8 @@ edit comments
       wait until element is enabled    ${txt_updat_commentlabel}
       click element    ${txt_updat_commentlabel}
       input text    ${txt_updat_commentlabel}    ${updated_comment}
-      press key    ${txt_updat_commentlabel}     \\13
+      click element    ${btn_add_comment_submit}
+#      press key    ${txt_updat_commentlabel}     \\13
 
 
 Click on Delete SecondaryMids button

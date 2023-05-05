@@ -16,4 +16,4 @@ checkbox_selectall_mids = "xpath://*[@id='__next']/div/div[2]/main/div[2]/div/ta
 btn_reason = "id:bink-form-field-deletion-reason"
 btn_delete_mids = "xpath://*[@id='Delete-button']"
 btn_delete_close = "xpath://*[@id='modal-download-target']/div[2]/div/div/div[1]/button"
-btn_delete_mids_dialog_box = "xpath://html/body/div/div/div[1]/div[2]/div/div/div[2]/section[2]/button"
+btn_delete_mids_dialog_box = "xpath://*[@id='Delete MIDs-button']/div"

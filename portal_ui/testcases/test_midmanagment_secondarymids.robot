@@ -118,14 +118,10 @@ Scenario : Add Secondary Visa and Master Mids and Link Locations to secondary mi
     And verify Location is linked to mid     ${visa_Secmid}
     Then Unlink the Linked Location
     And Delete the Mid and verify Mid was deleted     ${visa_Secmid}
-     Then Delete the Merchant by selecting three dots options from the Mids screen    ${merchant_name}
+    Then Delete the Merchant by selecting three dots options from the Mids screen    ${merchant_name}
     And verify merchant has deleted successfully    ${merchant_name}
     And Delete plan by selecting on delete option from three dots on merchant page      ${plan_name}
     And Verify plan has deleted from the plan page       ${plan_name}
-
-
-
-
 
 
 
@@ -183,6 +179,7 @@ Scenario: Add Secondary Visa and Master Mids and Link the Locations to secondary
     Then Edit comments  ${updated_comment}
     Then verify the comment has updated     ${updated_comment}
     Then close the Comment dialog box
+    Then Select Visa mid and open Secondary Mids single view
     And Delete the Mid and verify Mid was deleted  ${visa_Secmid}
     Then Delete the Merchant by selecting three dots options from the Mids screen    ${merchant_name}
     And verify merchant has deleted successfully    ${merchant_name}
