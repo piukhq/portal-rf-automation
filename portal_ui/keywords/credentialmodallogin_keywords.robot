@@ -31,7 +31,6 @@ I can see credentials verified sucessfully in Dev Staging and Production environ
     sleep    1
     element text should be    ${label_production_verified}    Verified
     sleep    1
-    capture page screenshot
 
 I close Credential Modal
     click element   ${btn_close}

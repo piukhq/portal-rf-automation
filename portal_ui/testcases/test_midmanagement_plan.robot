@@ -14,7 +14,6 @@ ${admin_test_user_password} =   Shove9117
 
 *** Test Cases ***
 Scenario: Create New Plan and Delete the plan
-    [Tags]    MID     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -34,7 +33,6 @@ Scenario: Create New Plan and Delete the plan
 
 
 Scenario: Create New Plan and Edit the plan and Delete
-    [Tags]    MID     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -62,7 +60,6 @@ Scenario: Create New Plan and Edit the plan and Delete
 
 
 Scenario: Create New Plan and Add a comment to plan
-    [Tags]    MID     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -89,7 +86,6 @@ Scenario: Create New Plan and Add a comment to plan
 
 
 Scenario: Create New Plan and Add and Edit comment to plan
-    [Tags]    MID    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory

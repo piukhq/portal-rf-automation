@@ -13,7 +13,6 @@ ${admin_test_user_password} =   Shove9117
 
 *** Test Cases ***
 Scenario: Credentials Modal Auto Launch
-    [Tags]    login     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     Then Click on the asset Comparator
@@ -21,7 +20,6 @@ Scenario: Credentials Modal Auto Launch
     Then Credentials modal appears in the middle of the screen
 
 Scenario: Credentials Modal Manual Launch
-    [Tags]    login     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     Then Click on the asset Comparator

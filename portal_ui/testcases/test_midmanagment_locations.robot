@@ -23,7 +23,6 @@ ${postcode} =    CT07HY
 *** Test Cases ***
 
 Scenario : Add Location to the merchant by entering all Physical location details
-     [Tags]    LOC    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -64,7 +63,6 @@ Scenario : Add Location to the merchant by entering all Physical location detail
 
 
 Scenario : Add Location and a sub location with the physical location details and do the bulk deletion
-      [Tags]    LOC1    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -118,7 +116,6 @@ Scenario : Add Location and a sub location with the physical location details an
 
 
 Scenario : Add Location New Location, Edit Location and delete the Location
-         [Tags]    LOC    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -169,7 +166,6 @@ Scenario : Add Location New Location, Edit Location and delete the Location
 
 
 Scenario : Add Duplicate Location id and verify the validation message
-       [Tags]    LOC    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -219,7 +215,6 @@ Scenario : Add Duplicate Location id and verify the validation message
 
 
 Scenario : verify Manditory feilds validation while saving location with physical location
-           [Tags]    LOC   robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -257,7 +252,6 @@ Scenario : verify Manditory feilds validation while saving location with physica
 
 
 Scenario : verify Manditory feilds validation while saving location without physical location
-               [Tags]    LOC    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory

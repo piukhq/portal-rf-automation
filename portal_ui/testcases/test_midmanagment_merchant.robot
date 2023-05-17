@@ -16,7 +16,6 @@ ${admin_test_user_password} =   Shove9117
 
 *** Test Cases ***
 Scenario:Create Plan, view paln and add two merchants and veiw Merchants and delete the paln and verify paln has deleted
-    [Tags]    MER     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -50,7 +49,6 @@ Scenario:Create Plan, view paln and add two merchants and veiw Merchants and del
 
 
 Scenario: Add plan and View plan , Add merchant and Edit merchant and delete the Merchant
-    [Tags]    MER    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -83,7 +81,6 @@ Scenario: Add plan and View plan , Add merchant and Edit merchant and delete the
 
 
 Scenario : Add Merchant and delete Merchant
-     [Tags]    MER    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory

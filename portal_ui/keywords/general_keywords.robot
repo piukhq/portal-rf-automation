@@ -13,15 +13,19 @@ ${org_name}     Bink
 
 
 *** Keywords ***
-
 Include Browser Drivers
-    Append To Environment Variable  PATH   ${EXECDIR}/portal_ui/resources/driver
-    Set Environment Variable  webdriver.chrome.driver  ${EXECDIR}/portal_ui/resources/driver/chromedriver
-    log   ${EXECDIR}/portal_ui/resources/driver/chromedriver
+    ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${chrome_options}    add_argument    --disable-extensions
+    Call Method    ${chrome_options}    add_argument    --headless
+    Call Method    ${chrome_options}    add_argument    --disable-gpu
+    Call Method    ${chrome_options}    add_argument    --no-sandbox
+    Call Method    ${chrome_options}    add_argument    window-size\=1440,813
+    Create Webdriver    Chrome    chrome_options=${chrome_options}
+
+
 
 Launch the Portal App
-    open browser   ${url}  ${browser}
-    maximize browser window
+    Go To   ${url} 
 
 Login to Aperture using
     [Arguments]     ${admin_test_user_email}        ${admin_test_user_password}

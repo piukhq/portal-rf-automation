@@ -16,24 +16,22 @@ ${admin_test_user_password} =   Shove9117
 
 *** Test Cases ***
 Scenario: Customer Wallet : Verify the elements before token search
-   [Tags]    customer_wallet   robot:skip-on-failure
    Given Launch the Portal App
    And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
    And Navigate to the Customer Wallet Page
    And Verify the web elements in the Customer Wallet Page during the page load
+   Kill Browser
 
 Scenario: Customer Wallet : JWT Token Search
-    [Tags]    customer_wallet   robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Customer Wallet Page
-    When Search a Jwt Token and click on Load User button   ${jwt}
+    When Search a Jwt Token and click on Load User button   ${jwt_linked_elsewhere_card}
     Then Verify the grid view of the customer wallet is displayed
     And Verify the schemes listed in the Grid View
 
 
 Scenario: Customer Wallet : Search using JWT Token with Membership Card in another wallet
-    [Tags]    customer_wallet   robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Customer Wallet Page
@@ -43,8 +41,6 @@ Scenario: Customer Wallet : Search using JWT Token with Membership Card in anoth
 
 
 Scenario: Customer Wallet : Search using Invalid JWT Token
-   [Tags]    customer_wallet   robot:skip-on-failure
-
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Customer Wallet Page
@@ -52,7 +48,6 @@ Scenario: Customer Wallet : Search using Invalid JWT Token
     Then Verify the error message   Your search didn't return any results. Please try again
 
 Scenario: Customer Wallet : Verify Transaction table elements
-    [Tags]    customer_wallet  robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Customer Wallet Page

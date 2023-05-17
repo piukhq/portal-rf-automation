@@ -24,4 +24,3 @@ I get a negative response from Dev, Staging and Production
     sleep    1
     element text should be    ${label_production_failed}    Failed
     sleep    1
-    capture page screenshot

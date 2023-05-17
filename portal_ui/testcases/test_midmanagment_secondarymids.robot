@@ -20,7 +20,6 @@ ${admin_test_user_password} =   Shove9117
 
 *** Test Cases ***
 Scenario :Add Secondary Visa and Master Mids to the merchant and Bulk delete the Mids
-              [Tags]    SECMID    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -73,7 +72,6 @@ Scenario :Add Secondary Visa and Master Mids to the merchant and Bulk delete the
 
 
 Scenario : Add Secondary Visa and Master Mids and Link Locations to secondary mids, unlink the mids and delete the secondary Mid
-                     [Tags]    SECMID    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -126,7 +124,6 @@ Scenario : Add Secondary Visa and Master Mids and Link Locations to secondary mi
 
 
 Scenario: Add Secondary Visa and Master Mids and Link the Locations to secondary mids and Add Comment and Edit comment to the secondary mids and delete the Secondary Mid
-                   [Tags]    SECMID    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory

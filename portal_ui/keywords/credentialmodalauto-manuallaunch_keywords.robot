@@ -10,8 +10,7 @@ I have not yet verified my credentials in Asset Comparator
 
 Credentials modal appears in the middle of the screen
     wait until page contains    If you are struggling to verify credentials, email cmorrow@bink.com for support
-    capture page screenshot
-
+ 
 I close the Credentials modal
     sleep    5
     click element   ${btn_close}

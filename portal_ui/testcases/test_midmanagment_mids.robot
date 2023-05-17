@@ -21,7 +21,6 @@ ${admin_test_user_password} =   Shove9117
 *** Test Cases ***
 
 Scenario : Add VISA AMEX and MASTER MIDS and delete plan
-     [Tags]    MIDS     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -69,7 +68,6 @@ Scenario : Add VISA AMEX and MASTER MIDS and delete plan
 
 
 Scenario : Create Duplicate Mid and verify validation message
-      [Tags]    MIDS     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -113,7 +111,6 @@ Scenario : Create Duplicate Mid and verify validation message
 
 
 Scenario : Create Mid and Bulk delete the MID and cancel the deletion and verify mid has not deleted
-      [Tags]    MIDS     robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
@@ -155,7 +152,6 @@ Scenario : Create Mid and Bulk delete the MID and cancel the deletion and verify
 
 
 Scenario : Create Mid and Bulk delete the MID and Confirm the deletion and Mids are deleted
-   [Tags]    MIDS1    robot:skip-on-failure
     Given Launch the Portal App
     And Login to Aperture using     ${admin_test_user_email}        ${admin_test_user_password}
     And Navigate to the Mid Directory
