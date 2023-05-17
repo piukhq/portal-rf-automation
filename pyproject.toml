@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "portal-rf-automation"
+version = "0.1.0"
+description = ""
+authors = ["Thenuja Viknarajah <thenuja_1@outlook.com>"]
+readme = "README.md"
+packages = [{include = "portal_rf_automation"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.30.0"
+selenium = "^4.9.1"
+robotframework = "^6.0.2"
+robotframework-pythonlibcore = "^4.1.2"
+robotframework-seleniumlibrary = "^6.1.0"
+robotframework-faker = "^5.0.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+
+
+[[tool.poetry.source]]
+name = "bink-pypi"
+url = "https://269fdc63-af3d-4eca-8101-8bddc22d6f14:b694b5b1-f97e-49e4-959e-f3c202e3ab91@pypi.tools.uksouth.bink.sh/simple"
+default = false
+secondary = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
