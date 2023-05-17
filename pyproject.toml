@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Thenuja Viknarajah <thenuja_1@outlook.com>"]
 readme = "README.md"
-packages = [{include = "portal_rf_automation"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -16,14 +15,22 @@ robotframework-seleniumlibrary = "^6.1.0"
 robotframework-faker = "^5.0.0"
 
 [tool.poetry.group.dev.dependencies]
-flake8 = "^6.0.0"
+flake8 = {version = "^6.0.0", source = "pypi-simple"}
 
 
 [[tool.poetry.source]]
 name = "bink-pypi"
-url = "https://269fdc63-af3d-4eca-8101-8bddc22d6f14:b694b5b1-f97e-49e4-959e-f3c202e3ab91@pypi.tools.uksouth.bink.sh/simple"
+url = "https://pypi.gb.bink.com/simple"
 default = false
 secondary = false
+
+
+[[tool.poetry.source]]
+name = "pypi-simple"
+url = "https://pypi.org/simple"
+default = true
+secondary = false
+
 
 [build-system]
 requires = ["poetry-core"]
