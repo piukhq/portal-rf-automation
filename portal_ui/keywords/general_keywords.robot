@@ -8,7 +8,7 @@ Variables   ../pageobjects/assetcomparator_locators.py
 
 *** Variables ***
 ${browser}  chrome
-${url}  https://portal.staging.gb.bink.com/
+${url}      %{WEBSITE_URL}
 ${org_name}     Bink
 
 
